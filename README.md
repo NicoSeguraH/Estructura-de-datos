@@ -1,0 +1,36 @@
+# Estructura-de-datos
+package com.unbosque.lectura.datos;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class LecturaCien {
+
+	public String mostrarContenido(String archivo) throws FileNotFoundException, IOException {
+
+		String cadena = "";
+		String cadenaC = "";
+		FileReader f = new FileReader(archivo);
+		BufferedReader b = new BufferedReader(f);
+		int c = 0;
+		ArrayList<String> listaPersonas = new ArrayList<String>();
+
+		String linea;
+
+		while ((linea = b.readLine()) != null) {
+
+			c = c + 1;
+			listaPersonas.add(linea);
+			System.out.println(c + ")" + linea);
+		}
+
+		System.out.println("Persona 1: " + listaPersonas.get(0));
+		System.out.println("Persona 2: " + listaPersonas.get(1));
+		System.out.println(listaPersonas);
+		cadenaC = cadena;
+		return cadenaC;
+	}
+}
