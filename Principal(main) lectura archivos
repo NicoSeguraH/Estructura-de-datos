@@ -1,0 +1,13 @@
+package com.unbosque.lectura.datos;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class PrincipalLectura {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+
+		LecturaCien lC = new LecturaCien();
+		lC.mostrarContenido("CienDatos");
+	}
+}
